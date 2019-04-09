@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack-dev-server  --open --mode development",
     "serv": "nodemon ./src/server/server.js",
-    "conc": "concurrently \"npm start\"  \" npm run serv\" "
+    "conc": "concurrently \"npm start\"  \" npm run serv\" ",
+    "heroku-postbuild" : "webpack -p"
   },
   "keywords": [],
   "author": "",
