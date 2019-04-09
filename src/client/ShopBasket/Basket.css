@@ -1,0 +1,39 @@
+.ShopBasket{
+    width:100%;
+    height:450px;
+    background-color: yellowgreen;
+    margin-top:100px;
+    text-align: center;
+    overflow: auto;
+    justify-content: center
+}
+.buts{
+    margin-top:100px;
+    display: grid;
+    justify-content: center
+}
+.yes{
+    width:120px;
+    height: 30px;
+    background-color: green;
+}
+.no{
+    width:120px;
+    height: 40px;
+    background-color: red;
+}
+.Info{
+    margin-top:100px;
+    height:450px;
+    width:100%;
+    background-color: darkkhaki
+}
+.Info input{
+    width:40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:20px auto;
+}
+.Info .yes{
+    margin:20px auto;
+}

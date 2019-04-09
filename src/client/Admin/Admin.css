@@ -1,0 +1,8 @@
+.Item{
+    width: 70%;
+    height:50px;
+    background-color: pink;
+    margin:10px auto ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
