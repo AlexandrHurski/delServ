@@ -1,0 +1,4 @@
+delivery service.
+server - express + mongoose ( mongo database)
+fontend  - react+redux
+bundler - webpack
