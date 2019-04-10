@@ -5,11 +5,11 @@
   "main": "index.js",
   "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "webpack-dev-server  --open --mode development",
-    "dev":"node server/server.js",
+    "dev": "webpack-dev-server  --open --mode development",
+    "start":"node server/server.js",
     "serv": "nodemon ./server/server.js",
     "conc": "concurrently \"npm start\"  \" npm run serv\" ",
-    "build":"webpack -p"
+    "heroku-postbuild": "webpack -p"
   },
   "keywords": [],
   "author": "",
