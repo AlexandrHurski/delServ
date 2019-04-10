@@ -1,15 +1,21 @@
+const path = require('path')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const OrderModel = require('./OrderModel')
 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
     next()
 })
+
+app.use(express.static(path.join(`${__dirname}`,'../')))
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+//   })
 
 app.post('/send',(req,res) => {
     let model = new OrderModel(req.body)
@@ -25,5 +31,5 @@ app.get('/orders',(req,res) => {
     })
 })
 app.listen(3000,(req,res) => {
-    console.log('listening serv on 3k')
+    console.log('hello from backend')
 })

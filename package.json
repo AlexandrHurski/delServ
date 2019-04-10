@@ -6,9 +6,10 @@
   "proxy": "http://localhost:3000",
   "scripts": {
     "start": "webpack-dev-server  --open --mode development",
-    "serv": "nodemon ./src/server/server.js",
+    "dev":"node server/server.js",
+    "serv": "nodemon ./server/server.js",
     "conc": "concurrently \"npm start\"  \" npm run serv\" ",
-    "heroku-postbuild" : "webpack -p"
+    "build":"webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -38,5 +39,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node":">11.0"
   }
 }
