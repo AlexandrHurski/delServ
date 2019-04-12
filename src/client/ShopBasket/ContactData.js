@@ -47,7 +47,7 @@ class ContactData extends React.Component{
             "phone":this.state.phome,
             "order":this.props.asstate.basket
         }
-        axios.post('http://localhost:3000/send', body)
+        axios.post('/send', body)
             .then(res => console.log(res.data));
     }
 
@@ -59,9 +59,8 @@ class ContactData extends React.Component{
                 <input type='text' placeholder='NAME'id='name'onChange={this.changeAdr}></input>
                 <input type='text' placeholder='PHONE' id='phone'onChange={this.changeAdr}></input>
                 <div className='yes'>OK</div>
-                <button onClick={this.sendFunc}>show CONTCAT-component LOCAL STATE</button>
-                {/* <button onClick={()=>console.log(this.props.asstate.basket)}>show CONTCAT-component LOCAL STATE</button> */}
-                <button onClick ={() => console.log(this.state)}>asd</button>
+                <button onClick={this.sendFunc}>SEND DATa</button>
+                <button onClick ={() => console.log(this.state)}>locState</button>
             </div>
         )
     }

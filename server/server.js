@@ -12,10 +12,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(express.static(path.join(`${__dirname}`)))
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(`${__dirname}`,'../', 'index.html'))
-//   })
+app.use(express.static(path.join(`${__dirname}`,'../dist/bundle.js')))
 
 app.post('/send',(req,res) => {
     let model = new OrderModel(req.body)
@@ -24,15 +21,16 @@ app.post('/send',(req,res) => {
         res.json(model)
     })
 })
-// app.get('/',(req,res) => {
-//     res.sendFile(path.join(__dirname,'../','index.html'))
-// })
 app.get('/orders',(req,res) => {
     OrderModel.find({}, (err, docs) => {
         if(err) return console.log(err)
         res.send(docs)
     })
 })
+
+// app.get('*', function(req, res) {
+//     res.sendFile(path.join(__dirname, '../index.html'));
+//   })
 app.listen(3000,(req,res) => {
     console.log('hello from backend')
 })

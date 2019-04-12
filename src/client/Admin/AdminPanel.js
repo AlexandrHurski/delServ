@@ -15,7 +15,8 @@ class AdminPanel extends React.Component{
         // .then(res => this.setState({orders:res.data}))
     // }
     componentDidMount(){
-        axios.get('http://localhost:3000/orders')
+        // axios.get('http://localhost:3000/orders')
+        axios.get('/orders')
         .then(res => {this.setState({orders:res.data})})
     }
     stater = () => {

@@ -21,7 +21,6 @@ export default class MainBar extends React.Component{
     //     .catch()
     // }
 
-    
     // getServ =()=> {console.log(this.state)}
     //     fetch('http://localhost:3000/books')
     //         .then( res =>res.json() )
