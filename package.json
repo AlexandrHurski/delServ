@@ -6,11 +6,10 @@
   "proxy": "http://localhost:3000",
   "scripts": {
     "dev": "webpack-dev-server  --open --mode development",
-    "start": "node server/server.js",
     "serv": "nodemon ./server/server.js",
     "conc": "concurrently \"npm run dev\"  \" npm run serv\" ",
-    "build": "webpack --mode production",
-    "heroku-postbuild": " npm start"
+    "heroku-postbuild": " webpack -p",
+    "start": "node server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +18,7 @@
     "axios": "^0.18.0",
     "concurrently": "^4.1.0",
     "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
     "mongoose": "^5.5.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

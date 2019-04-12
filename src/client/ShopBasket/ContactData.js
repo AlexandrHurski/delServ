@@ -58,8 +58,7 @@ class ContactData extends React.Component{
                 <input type='text' placeholder='ADRESS'id='adr' onChange={this.changeAdr}></input>
                 <input type='text' placeholder='NAME'id='name'onChange={this.changeAdr}></input>
                 <input type='text' placeholder='PHONE' id='phone'onChange={this.changeAdr}></input>
-                <div className='yes'>OK</div>
-                <button onClick={this.sendFunc}>SEND DATa</button>
+                <div className='yes' onClick={this.sendFunc}>SEND DATA</div>
                 <button onClick ={() => console.log(this.state)}>locState</button>
             </div>
         )

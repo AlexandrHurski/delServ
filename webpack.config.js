@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     devtool: 'source-map',
     entry: './src/index.js',
@@ -6,6 +8,9 @@ module.exports = {
       publicPath: '/',
       filename: 'bundle.js'
     },
+    plugins: [
+      new HtmlWebpackPlugin()
+    ],
     module: {
       rules: [
         {
