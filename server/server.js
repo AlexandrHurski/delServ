@@ -12,9 +12,9 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(express.static(path.join(`${__dirname}`,'../')))
+app.use(express.static(path.join(`${__dirname}`)))
 // app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+//     res.sendFile(path.join(`${__dirname}`,'../', 'index.html'))
 //   })
 
 app.post('/send',(req,res) => {
@@ -24,6 +24,9 @@ app.post('/send',(req,res) => {
         res.json(model)
     })
 })
+// app.get('/',(req,res) => {
+//     res.sendFile(path.join(__dirname,'../','index.html'))
+// })
 app.get('/orders',(req,res) => {
     OrderModel.find({}, (err, docs) => {
         if(err) return console.log(err)

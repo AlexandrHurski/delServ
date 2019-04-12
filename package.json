@@ -8,8 +8,9 @@
     "dev": "webpack-dev-server  --open --mode development",
     "start":"node server/server.js",
     "serv": "nodemon ./server/server.js",
-    "conc": "concurrently \"npm start\"  \" npm run serv\" ",
-    "heroku-postbuild": "webpack -p"
+    "conc": "concurrently \"npm run dev\"  \" npm run serv\" ",
+    "build":"webpack --mode production",
+    "heroku-postbuild": " npm start"
   },
   "keywords": [],
   "author": "",
