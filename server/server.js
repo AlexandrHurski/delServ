@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const OrderModel = require('./OrderModel')
-
+const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname,'../')))
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -29,6 +29,6 @@ app.post('/send',(req,res) => {
     })
 })
 
-app.listen(3000,(req,res) => {
+app.listen(port,(req,res) => {
     console.log('hello from backend')
 })
